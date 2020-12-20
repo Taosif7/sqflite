@@ -10,8 +10,7 @@ import 'package:sqflite_common_ffi/src/windows/setup_impl.dart';
 void windowsInit() {
   String path;
   if (kReleaseMode) {
-    var location = Directory.current.path;
-    path = normalize(join(location, 'sqlite3.dll'));
+    path = 'sqlite3.dll';
   } else {
     var location = findPackagePath(Directory.current.path);
     path = normalize(join(location, 'src', 'windows', 'sqlite3.dll'));
